@@ -8,15 +8,15 @@ else
 	location="$location/rss.xml"
 fi
 
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" > $location
 {
+	echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
 	echo "<rss version=\"2.0\">"
 	echo "<channel>"
 	echo "<title>~$user on TTBP</title>"
 	echo "<link>http://tilde.town/~$user/blog/</link>"
 	echo "<updated>$(date)</updated>"
 	echo "<description>$user's blog on tilde.town</description>"
-} >> $location
+} > $location
 
 for x in $(ls /home/$user/.ttbp/entries)
 do
