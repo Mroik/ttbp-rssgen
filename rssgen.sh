@@ -1,6 +1,8 @@
+#!/bin/sh
 user=$(whoami)
 cd ~
-read -p "Specify the blog location(~/public_html/blog/): " location
+echo -n "Specify the blog location(~/public_html/blog/): "
+read location
 if [ -z $location ]
 then
 	location="/home/$user/public_html/blog/rss.xml"
