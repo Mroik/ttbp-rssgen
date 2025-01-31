@@ -20,7 +20,7 @@ fi
 	echo "<description>$user's blog on tilde.town</description>"
 } > $location
 
-for x in $(ls /home/$user/.ttbp/entries | grep -v "^hidden")
+for x in $(ls /home/$user/.ttbp/entries | grep -v "hidden")
 do
 	{
 		echo "<item>"
